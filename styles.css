@@ -1,103 +1,95 @@
-/* Configuración general */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #4CAF50, #2e7d32);
+    background: #f0f0f0;
+    color: #333;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #004d00;
     color: white;
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    padding: 15px;
+    z-index: 1000;
 }
 
-/* Contenedor */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+.navbar .nav-link {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-/* Caja de Login y Registro */
-.login-box {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 40px;
-    border-radius: 10px;
-    width: 300px;
+.navbar .nav-link:hover {
+    color: #00ff88;
+}
+
+.section {
+    padding: 80px 20px;
+    margin-top: 60px;
     text-align: center;
+    animation: fadeInUp 1.5s ease-in-out;
 }
 
-/* Encabezados */
-.title {
-    font-size: 2em;
-    color: #4CAF50;
-    margin-bottom: 20px;
-}
-
-/* Input Containers */
-.input-container {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.input-container .input {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-bottom: 2px solid #4CAF50;
-    background: none;
+.header {
+    background: linear-gradient(135deg, #4CAF50, #2e7d32);
     color: white;
-    outline: none;
-    transition: 0.3s;
 }
 
-.input-container .label {
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    color: gray;
-    pointer-events: none;
-    transition: 0.3s;
+.features, .config, .documentation, .contact {
+    background: rgba(255, 255, 255, 0.9);
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 10px;
+    padding: 50px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
-.input-container .input:focus + .label,
-.input-container .input:valid + .label {
-    top: -15px;
-    left: 5px;
-    color: #4CAF50;
-    font-size: 0.8em;
-}
-
-.submit {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #4CAF50;
-    color: white;
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #00ff88;
+    color: #004d00;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background 0.3s, transform 0.3s;
     cursor: pointer;
-    transition: 0.3s;
 }
 
-.submit:hover {
-    background-color: #45a049;
+.btn:hover {
+    background-color: #00cc6a;
+    transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .footer {
-    margin-top: 10px;
+    background: #003300;
+    color: white;
+    padding: 20px;
+    text-align: center;
     font-size: 0.9em;
-}
-
-.footer .link {
-    color: #4CAF50;
-    text-decoration: none;
-}
-
-.footer .link:hover {
-    text-decoration: underline;
+    margin-top: 20px;
 }
