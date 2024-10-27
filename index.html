@@ -3,70 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASC3NTbot</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8f0;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-        }
-        h1, h2 {
-            color: #006400; /* Verde oscuro */
-        }
-        a {
-            color: #008000; /* Verde medio */
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        section {
-            margin-bottom: 20px;
-            padding: 15px;
-            border-radius: 5px;
-            background-color: #e6ffe6; /* Verde pálido */
-        }
-    </style>
+    <title>ASC3NTbot - Bot para Twitch y osu!</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Sección de Inicio -->
+    <header class="header">
+        <h1>Bienvenido a ASC3NTbot</h1>
+        <p>Un bot personalizado para gestionar solicitudes en Twitch y osu!</p>
+        <a href="#features" class="btn">Descubre Más</a>
+    </header>
 
-    <h1>Bienvenido a ASC3NTbot</h1>
-    <p>Un bot de solicitudes para Twitch y osu!, diseñado para uso personal. Permite a los usuarios enviar solicitudes de mapas de manera eficiente.</p>
-    <p><a href="https://github.com/ASC3NT/ASC3NTbot/">Visita el repositorio en GitHub</a></p>
-
-    <section>
-        <h2>Configuración de la API</h2>
-        <p><strong>API Sin Clave:</strong> Proporcionar detalles sobre cómo usar la API heredada de osu!.</p>
-        <p><strong>Generar Nueva Clave de API:</strong> Instrucciones sobre cómo obtener una nueva clave.</p>
-        <p><strong>IRC:</strong> Información sobre la contraseña del IRC.</p>
-        <p><strong>Generar Nueva Contraseña del IRC:</strong> Instrucciones sobre cómo establecer la contraseña.</p>
-    </section>
-
-    <section>
-        <h2>¿Cómo usar ASC3NTbot?</h2>
-        <p>Guía rápida sobre cómo interactuar con el bot, incluyendo comandos disponibles y ejemplos de uso.</p>
-    </section>
-
-    <section>
-        <h2>Características del Bot</h2>
+    <!-- Sección de Características -->
+    <section id="features" class="section">
+        <h2>Características</h2>
         <ul>
-            <li>Soporte para múltiples solicitudes.</li>
-            <li>Respuestas automáticas y enlaces a los mapas.</li>
-            <li>Integración con Twitch y osu!.</li>
+            <li>Soporte para solicitudes múltiples y personalizadas</li>
+            <li>Enlaces automáticos a mapas de osu! en el chat de Twitch</li>
+            <li>Configuración personalizada a través de un archivo .ini</li>
+            <li>Animaciones visuales y comandos de uso amigable</li>
         </ul>
     </section>
 
-    <section>
+    <!-- Configuración de API y IRC -->
+    <section id="config" class="section">
+        <h2>Configuración de API y IRC</h2>
+        <form>
+            <label for="api-key">Clave de API de osu!</label>
+            <input type="text" id="api-key" placeholder="Ingresa tu clave de API"><br>
+
+            <label for="irc-password">Contraseña de IRC</label>
+            <input type="password" id="irc-password" placeholder="Ingresa tu contraseña de IRC">
+            <button type="submit" class="btn">Guardar Configuración</button>
+        </form>
+    </section>
+
+    <!-- Documentación -->
+    <section id="documentation" class="section">
+        <h2>Documentación</h2>
+        <p>Para usar ASC3NTbot, ingresa comandos en el chat de Twitch con el prefijo configurado. Ejemplos:</p>
+        <ul>
+            <li><code>!request nombre_del_mapa</code> - Solicitar un mapa</li>
+            <li><code>!status</code> - Ver el estado de las solicitudes actuales</li>
+        </ul>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contact" class="section">
         <h2>Contacto</h2>
-        <p>Si tienes alguna pregunta o sugerencia, no dudes en contactarme a través de Discord: <strong>asc3nt</strong>.</p>
+        <p>¿Tienes preguntas o sugerencias? Contáctame en Discord: <strong>asc3nt</strong></p>
+        <p>Repositorio en GitHub: <a href="https://github.com/ASC3NT/ASC3NTbot" target="_blank">ASC3NTbot</a></p>
     </section>
 
-    <section>
-        <h2>Licencia</h2>
-        <p>Información sobre la licencia bajo la cual se publica el bot.</p>
-    </section>
-
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2023 ASC3NTbot - Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
